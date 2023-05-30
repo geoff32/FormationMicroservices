@@ -4,7 +4,7 @@ using Microsoft.Extensions.Logging;
 using Order.Services.Abstractions;
 using Order.Services.Exceptions;
 using Order.Services.Models;
-using Payment.Services.Abstractions;
+using Order.Services.Payments;
 using OrderModels = Order.Services.Models;
 
 namespace Order.Services;
@@ -12,13 +12,13 @@ namespace Order.Services;
 internal class OrderService : IOrderService
 {
     private readonly OrderDbContext _dbContext;
-    private readonly IPaymentService _paymentService;
+    private readonly IPaymentApi _paymentApi;
     private readonly ILogger<OrderService> _logger;
 
-    public OrderService(OrderDbContext dbContext, IPaymentService paymentService, ILogger<OrderService> logger)
+    public OrderService(OrderDbContext dbContext, IPaymentApi paymentApi, ILogger<OrderService> logger)
     {
         _dbContext = dbContext;
-        _paymentService = paymentService;
+        _paymentApi = paymentApi;
         _logger = logger;
     }
 
@@ -34,8 +34,8 @@ internal class OrderService : IOrderService
         _dbContext.Orders.Add(order);
         await _dbContext.SaveChangesAsync();
 
-        var payment = await _paymentService.SubmitPaymentAsync(order.Id, order.Amount);
-        if (payment.Status == Payment.Services.Models.PaymentStatus.Accepted)
+        var payment = await _paymentApi.ValidateAsync(new(order.Id, order.Amount));
+        if (payment.Status == PaymentApiStatus.Accepted)
         {
             await AcceptOrderAsync(order.Id);
         }
