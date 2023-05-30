@@ -1,7 +1,6 @@
 ﻿using System;
 using Microsoft.Extensions.Logging;
 using Payment.Services.Abstractions;
-using Payment.Services.Models;
 using PaymentModels = Payment.Services.Models;
 
 namespace Payment.Services;

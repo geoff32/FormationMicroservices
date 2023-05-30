@@ -5,23 +5,26 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.WebApi", "src\Order.WebApi\Order.WebApi.csproj", "{509745A9-4258-4ABE-9CE4-EC909712E701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.WebApi", "src\Order.WebApi\Order.WebApi.csproj", "{509745A9-4258-4ABE-9CE4-EC909712E701}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Services", "src\Order.Services\Order.Services.csproj", "{F4379186-9EEF-4D77-B25C-88C56A3EDEBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Services", "src\Order.Services\Order.Services.csproj", "{F4379186-9EEF-4D77-B25C-88C56A3EDEBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infrastructure.Common", "src\Infrastructure.Common\Infrastructure.Common.csproj", "{0F54EB90-7E0C-489B-A050-0597420CEB56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Infrastructure.Common", "src\Infrastructure.Common\Infrastructure.Common.csproj", "{0F54EB90-7E0C-489B-A050-0597420CEB56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Services", "src\Payment.Services\Payment.Services.csproj", "{CA4CDECD-FE01-42EC-8AA6-076B6EB46D4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.Services", "src\Payment.Services\Payment.Services.csproj", "{CA4CDECD-FE01-42EC-8AA6-076B6EB46D4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.WebApi", "src\Payment.WebApi\Payment.WebApi.csproj", "{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.WebApi", "src\Payment.WebApi\Payment.WebApi.csproj", "{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Services.Abstractions", "Order.Services.Abstractions\Order.Services.Abstractions.csproj", "{05A92462-5EDF-4A79-9541-14CD96039F92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Services.Abstractions", "Payment.Services.Abstractions\Payment.Services.Abstractions.csproj", "{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monolith.WebApi", "Monolith.WebApi\Monolith.WebApi.csproj", "{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{509745A9-4258-4ABE-9CE4-EC909712E701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -44,6 +47,21 @@ Global
 		{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{05A92462-5EDF-4A79-9541-14CD96039F92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05A92462-5EDF-4A79-9541-14CD96039F92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05A92462-5EDF-4A79-9541-14CD96039F92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05A92462-5EDF-4A79-9541-14CD96039F92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{509745A9-4258-4ABE-9CE4-EC909712E701} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
@@ -51,5 +69,11 @@ Global
 		{0F54EB90-7E0C-489B-A050-0597420CEB56} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
 		{CA4CDECD-FE01-42EC-8AA6-076B6EB46D4C} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
 		{3D0A7627-D859-4CB7-8B4B-D93789B84A6E} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
+		{05A92462-5EDF-4A79-9541-14CD96039F92} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
+		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
+		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {02A16284-AE9F-4DB1-9DCE-A8F254B06937}
 	EndGlobalSection
 EndGlobal

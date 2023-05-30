@@ -3,7 +3,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.VisualBasic;
 using Payment.Services;
 using Payment.Services.Abstractions;
-using Payment.Services.Models;
 
 namespace Microsoft.Extensions.DependencyInjection;
 

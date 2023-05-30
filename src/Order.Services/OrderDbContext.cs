@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 
-namespace Order.Services.Models;
+namespace Order.Services;
 
 public class OrderDbContext : DbContext
 {
@@ -10,6 +10,6 @@ public class OrderDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Order> Orders { get; set; } = default!;
+    public virtual DbSet<Models.Order> Orders { get; set; } = default!;
 }
 

@@ -17,12 +17,12 @@
     <None Remove="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Abstractions\" />
     <Folder Include="DependencyInjection\" />
-    <Folder Include="Models\" />
     <Folder Include="Exceptions\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Order.Services.Abstractions\Order.Services.Abstractions.csproj" />
+    <ProjectReference Include="..\..\Payment.Services.Abstractions\Payment.Services.Abstractions.csproj" />
     <ProjectReference Include="..\Infrastructure.Common\Infrastructure.Common.csproj" />
   </ItemGroup>
 </Project>
