@@ -15,11 +15,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.Services", "src\Pay
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.WebApi", "src\Payment.WebApi\Payment.WebApi.csproj", "{3D0A7627-D859-4CB7-8B4B-D93789B84A6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Order.Services.Abstractions", "Order.Services.Abstractions\Order.Services.Abstractions.csproj", "{05A92462-5EDF-4A79-9541-14CD96039F92}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Order.Services.Abstractions", "Order.Services.Abstractions\Order.Services.Abstractions.csproj", "{05A92462-5EDF-4A79-9541-14CD96039F92}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payment.Services.Abstractions", "Payment.Services.Abstractions\Payment.Services.Abstractions.csproj", "{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Payment.Services.Abstractions", "Payment.Services.Abstractions\Payment.Services.Abstractions.csproj", "{69FFF84F-4BA5-4392-A83B-90DD4A381CBC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monolith.WebApi", "Monolith.WebApi\Monolith.WebApi.csproj", "{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Monolith.WebApi", "Monolith.WebApi\Monolith.WebApi.csproj", "{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Events.Common", "Events.Common\Events.Common.csproj", "{6E37E351-035B-42AC-8365-AE0FFC32D60C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -59,6 +61,10 @@ Global
 		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E37E351-035B-42AC-8365-AE0FFC32D60C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E37E351-035B-42AC-8365-AE0FFC32D60C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E37E351-035B-42AC-8365-AE0FFC32D60C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E37E351-035B-42AC-8365-AE0FFC32D60C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -72,6 +78,7 @@ Global
 		{05A92462-5EDF-4A79-9541-14CD96039F92} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
 		{69FFF84F-4BA5-4392-A83B-90DD4A381CBC} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
 		{463C8BA4-6C7A-4C9C-B508-29C6D4720C84} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
+		{6E37E351-035B-42AC-8365-AE0FFC32D60C} = {2B76A6F6-0E37-4314-BE8F-B48AA92D84AA}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {02A16284-AE9F-4DB1-9DCE-A8F254B06937}

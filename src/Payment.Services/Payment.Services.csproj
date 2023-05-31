@@ -15,6 +15,10 @@
     <Folder Include="DependencyInjection\" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.0.16" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Events.Common\Events.Common.csproj" />
     <ProjectReference Include="..\..\Payment.Services.Abstractions\Payment.Services.Abstractions.csproj" />
     <ProjectReference Include="..\Infrastructure.Common\Infrastructure.Common.csproj" />
   </ItemGroup>
