@@ -1,10 +1,11 @@
 ﻿using System;
+using Events.Common;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using Order.Services.Abstractions;
 using Order.Services.Exceptions;
 using Order.Services.Models;
-using Order.Services.Payments;
 using OrderModels = Order.Services.Models;
 
 namespace Order.Services;
@@ -12,14 +13,14 @@ namespace Order.Services;
 internal class OrderService : IOrderService
 {
     private readonly OrderDbContext _dbContext;
-    private readonly IPaymentApi _paymentApi;
     private readonly ILogger<OrderService> _logger;
+    private readonly IBus _bus;
 
-    public OrderService(OrderDbContext dbContext, IPaymentApi paymentApi, ILogger<OrderService> logger)
+    public OrderService(OrderDbContext dbContext, ILogger<OrderService> logger, IBus bus)
     {
         _dbContext = dbContext;
-        _paymentApi = paymentApi;
         _logger = logger;
+        _bus = bus;
     }
 
     public async Task<Guid> CreateOrderAsync(double amount)
@@ -34,14 +35,13 @@ internal class OrderService : IOrderService
         _dbContext.Orders.Add(order);
         await _dbContext.SaveChangesAsync();
 
-        var payment = await _paymentApi.ValidateAsync(new(order.Id, order.Amount));
-        if (payment.Status == PaymentApiStatus.Accepted)
+        try
         {
-            await AcceptOrderAsync(order.Id);
+            await _bus.Publish(new SubmitPaymentEvent(order.Id, order.Amount));
         }
-        else
+        catch (Exception ex)
         {
-            await RefuseOrderAsync(order.Id);
+            _logger.LogError(ex, $"Unable to publish {typeof(SubmitPaymentEvent)}");
         }
 
         return order.Id;

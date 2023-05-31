@@ -14,6 +14,7 @@ public static class PaymentExtensions
     {
         services.AddScoped<IPaymentService, PaymentService>();
         services.AddDatabase<PaymentDbContext>(PROGRAMNAME);
+        services.AddMassTransitPayment();
     }
 }
 
